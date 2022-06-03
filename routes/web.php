@@ -21,3 +21,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     });
 });
+
+/**
+ * WEDDING INVITATION
+ * 
+ * 
+ */
+
+Route::get('/{couple}',  [App\Http\Controllers\Main\WeddingInvitationController::class, 'index'])->name('wedding_invitation');
